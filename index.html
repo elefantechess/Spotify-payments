@@ -1,0 +1,83 @@
+<!DOCTYPE html><html id="app" lang="en-GB" dir="ltr"><head>
+  <meta charset="utf-8">
+  <title>Log in - Spotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="icon" href="images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+  <script defer="" src="js/indexReact.b469f5c692342a4a74f6.js" sp-bootstrap=""></script>
+  <meta id="bootstrap-data" sp-bootstrap-data="{" phonefeatureenabled":false,"previewenabled":false,"user":false,"tpastate":"aqdxymuvzbzarkikj1oxeuufmhyzj+6dsh83zazvkmssulzhvppqc8pvlo+rbq5t7i3vfhxh6svzcx6p39fsl0jtzgginixobgxbso6y4em9q="" 7v1k6wr="" qsuugu3wzfsmc="" pjmxh2wguh9cclmhbrubv+eloy3sqrggcdmj0gjfh2393y2ewyda6izfbonu0klwhmyffwtjjxbnrwwsnihen6oo1gzr8r9+04j6jpgr22rgtnvlqctvpwcrqbxehyf+6vzir7mdkg4fdegb6hjfqcyhbe9eywmdxk7q+9tahorkw9fhptueq2czqbjzbzefwkeq4wgvmmnqvilqpa50eqk="," geolocationcountrycode":"nl","state":"","flowctx":"a1b61e95-47d9-4b21-8f15-9e3b8f31fe22:1749989915","bon":["0","0",-442920064]}"="" sp-component="login" sp-translations-data="eyJlcnJvclRpdGxlIjoiRXJyb3IiLCJsb2dpblRpdGxlIjoiTG9nIGluIiwiZm9yZ290WW91clBhc3N3b3JkVXNlcm5hbWUiOiJGb3Jnb3QgeW91ciBwYXNzd29yZD8iLCJkb250SGF2ZUFuQWNjb3VudCI6IkRvbid0IGhhdmUgYW4gYWNjb3VudD8iLCJpbnB1dFVzZXJuYW1lIjoiRW1haWwgYWRkcmVzcyBvciB1c2VybmFtZSIsImlucHV0RW1haWxPclVzZXJuYW1lIjoiRW1haWwgb3IgdXNlcm5hbWUiLCJpbnB1dFBhc3N3b3JkIjoiUGFzc3dvcmQiLCJjaGVja2JveFJlbWVtYmVyTWUiOiJSZW1lbWJlciBtZSIsImVycm9yRm9ybURlZmF1bHQiOiJPb3BzISBTb21ldGhpbmcgd2VudCB3cm9uZywgcGxlYXNlIHRyeSBhZ2FpbiBvciB0YWtlIGEgbG9vayBhdCBvdXIgPGhlbHBMaW5rPmhlbHAgYXJlYTwvaGVscExpbms+IiwiZXJyb3JJbnZhbGlkQ3JlZGVudGlhbHMiOiJJbmNvcnJlY3QgdXNlcm5hbWUgb3IgcGFzc3dvcmQuIiwiZXJyb3JJbnZhbGlkQ3JlZGVudGlhbHNJbXByb3ZlZCI6IkluY29ycmVjdCBlbWFpbCBhZGRyZXNzLCB1c2VybmFtZSBvciBwYXNzd29yZC4iLCJlcnJvclVua25vd24iOiJPb3BzISBTb21ldGhpbmcgd2VudCB3cm9uZywgcGxlYXNlIHRyeSBhZ2FpbiBvciB0YWtlIGEgbG9vayBhdCBvdXIgPGhlbHBMaW5rPmhlbHAgYXJlYTwvaGVscExpbms+IiwiZXJyb3JUcmFuc2llbnQiOiJBbiBlcnJvciBoYXMgb2NjdXJyZWQgcHJvY2Vzc2luZyB5b3VyIGxvZ2luLiBQbGVhc2UgdHJ5IGFnYWluLiIsImVycm9yRmFjZWJvb2tBY2NvdW50IjoiWW91IGRvIG5vdCBoYXZlIGEgU3BvdGlmeSBhY2NvdW50IGNvbm5lY3RlZCB0byB5b3VyIEZhY2Vib29rIGFjY291bnQuIElmIHlvdSBoYXZlIGEgU3BvdGlmeSBhY2NvdW50LCBwbGVhc2UgbG9nIGluIHdpdGggeW91ciBTcG90aWZ5IGNyZWRlbnRpYWxzLiBJZiB5b3UgZG8gbm90IGhhdmUgYSBTcG90aWZ5IGFjY291bnQsIDxsaW5rV2l0aEhyZWY+c2lnbiB1cDwvbGlua1dpdGhIcmVmPi4iLCJlcnJvclNlcnZlckVycm9yIjoiQW4gZXJyb3IgaGFzIG9jY3VycmVkIHByb2Nlc3NpbmcgeW91ciByZXF1ZXN0LiBQbGVhc2UgdHJ5IGFnYWluLiIsImVycm9yVXNlcm5hbWVSZXF1aXJlZCI6IlBsZWFzZSBlbnRlciB5b3VyIFNwb3RpZnkgdXNlcm5hbWUgb3IgZW1haWwgYWRkcmVzcy4iLCJlcnJvclVzZXJuYW1lSW52YWxpZENoYXJhY3RlcnMiOiJGb3JiaWRkZW4gY2hhcmFjdGVyKHMpIHtmb3JiaWRkZW5DaGFyc30gaW4gdXNlcm5hbWUuIiwiZXJyb3JQYXNzd29yZFJlcXVpcmVkIjoiUGxlYXNlIGVudGVyIHlvdXIgcGFzc3dvcmQuIiwiZXJyb3JOb0ludGVybmV0Q29ubmVjdGl2aXR5IjoiUHJvYmxlbSBjb25uZWN0aW5nLiBDaGVjayB5b3VyIGludGVybmV0IGNvbm5lY3Rpb24gYW5kIHt0cnlBZ2Fpbkxpbmt9LiIsImVycm9yVHJ5QWdhaW4iOiJ0cnkgYWdhaW4iLCJsb2dJbiI6IkxvZyBJbiIsImxvZ0luVG9TcG90aWZ5IjoiTG9nIGluIHRvIFNwb3RpZnkiLCJzaWduVXBGb3JTcG90aWZ5IjoiU2lnbiB1cCBmb3IgU3BvdGlmeSIsIm9yIjoib3IiLCJsb2dpblRvQ29udGludWUiOiJUbyBjb250aW51ZSwgbG9nIGluIHRvIFNwb3RpZnkuIiwiZXJyb3JWYWxpZGF0aW9uSW52YWxpZENvZGUiOiJUaGlzIGNvZGUgaXMgaW52YWxpZC4gQ2hlY2sgdGhlIFNNUyBhbmQgdHJ5IGFnYWluLiIsImVycm9yVmFsaWRhdGlvbkludmFsaWRDb2RlR2VuZXJpYyI6IlRoaXMgY29kZSBpcyBpbnZhbGlkLiBDaGVjayB0aGUgY29kZSBhbmQgdHJ5IGFnYWluLiIsImVycm9yU3VibWl0VG9va1Rvb0xvbmdUb0NyZWF0ZSI6Ikl0IHRvb2sgdG9vIGxvbmcgdG8gY29tcGxldGUgeW91ciByZXF1ZXN0LiBUcnkgYWdhaW4uIiwiZXJyb3JBcHBsZUFjY291bnQiOiJZb3UgZG8gbm90IGhhdmUgYSBTcG90aWZ5IGFjY291bnQgY29ubmVjdGVkIHRvIHlvdXIgQXBwbGUgSUQuIElmIHlvdSBoYXZlIGEgU3BvdGlmeSBhY2NvdW50LCBwbGVhc2UgdHJ5IGxvZyBpbiB3aXRoIHlvdXIgU3BvdGlmeSBlbWFpbCBvciB1c2VybmFtZS4gSWYgeW91IGRvIG5vdCBoYXZlIGEgU3BvdGlmeSBhY2NvdW50LCBwbGVhc2Ugc2lnbiB1cC4iLCJjb250aW51ZVdpdGhBcHBsZSI6IkNvbnRpbnVlIHdpdGggQXBwbGUiLCJjb250aW51ZVdpdGhGYWNlYm9vayI6IkNvbnRpbnVlIHdpdGggRmFjZWJvb2siLCJjb250aW51ZVdpdGhQaG9uZU51bWJlciI6IkNvbnRpbnVlIHdpdGggcGhvbmUgbnVtYmVyIiwiY29udGludWVXaXRoR29vZ2xlIjoiQ29udGludWUgd2l0aCBHb29nbGUiLCJlcnJvckdvb2dsZUFjY291bnQiOiJZb3UgZG8gbm90IGhhdmUgYSBTcG90aWZ5IGFjY291bnQgY29ubmVjdGVkIHRvIHlvdXIgR29vZ2xlIEFjY291bnQuIElmIHlvdSBoYXZlIGEgU3BvdGlmeSBhY2NvdW50LCBwbGVhc2UgbG9nIGluIHdpdGggeW91ciBTcG90aWZ5IGVtYWlsIG9yIHVzZXJuYW1lLiBJZiB5b3UgZG8gbm90IGhhdmUgYSBTcG90aWZ5IGFjY291bnQsIHBsZWFzZSBzaWduIHVwLiIsInJlY2FwdGNoYUxlZ2FsTm90aWNlIjoiVGhpcyBzaXRlIGlzIHByb3RlY3RlZCBieSByZUNBUFRDSEEgYW5kIHRoZSBHb29nbGUgPGdvb2dsZVByaXZhY3lQb2xpY3lMaW5rPlByaXZhY3kgUG9saWN5PC9nb29nbGVQcml2YWN5UG9saWN5TGluaz4gYW5kIDxnb29nbGVUZXJtc0xpbms+VGVybXMgb2YgU2VydmljZTwvZ29vZ2xlVGVybXNMaW5rPiBhcHBseS4iLCJsb2dpbldpdGhvdXRQYXNzd29yZCI6IkxvZyBpbiB3aXRob3V0IHBhc3N3b3JkIiwibWFnaWNfbGlua19wb3B1cF9oZWFkZXIiOiJIYXZpbmcgdHJvdWJsZSBsb2dnaW5nIGluPyIsIm1hZ2ljX2xpbmtfcG9wdXBfYm9keSI6IldlIHNlbnQgYW4gZW1haWwgd2l0aCBhIGxpbmsgdGhhdCB3aWxsIGxvZyB5b3UgaW4gd2l0aG91dCBhIHBhc3N3b3JkLiIsImRpYWxvZ19fYWN0aW9uX3JldHJ5X2xvZ2luIjoiVHJ5IGFub3RoZXIgcGFzc3dvcmQiLCJkaWFsb2dGYWNlYm9va0Rpc2FsbG93ZWRUaXRsZSI6Ildl4oCZcmUgaGF2aW5nIHByb2JsZW1zIGxvZ2dpbmcgeW91IGluIiwiZGlhbG9nRmFjZWJvb2tEaXNhbGxvd2VkQm9keSI6IlRvIGNvbnRpbnVlLCB3ZeKAmWxsIGhlbHAgeW91IHNldCBhIHBhc3N3b3JkIHNvIHRoYXQgeW91IGNhbiBsb2cgaW4gdG8geW91ciBTcG90aWZ5LiIsImRpYWxvZ0ZhY2Vib29rRGlzYWxsb3dlZEJ1dHRvbkNvbnRpbnVlIjoiQ29udGludWUiLCJkaWFsb2dGYWNlYm9va0Rpc2FsbG93ZWRCdXR0b25EaXNtaXNzIjoiRGlzbWlzcyIsImNvbnRpbnVlIjoiQ29udGludWUiLCJlcnJvckludmFsaWRDcmVkZW50aWFsc1Bhc3N3b3JkbGVzcyI6IkVtYWlsIG9yIHVzZXJuYW1lIGlzbuKAmXQgbGlua2VkIHRvIGEgU3BvdGlmeSBhY2NvdW50IiwiaGJ4X2Jsb2NrX2RpYWxvZ190aXRsZSI6Ildl4oCZcmUgaGF2aW5nIHByb2JsZW1zIGxvZ2dpbmcgeW91IGluIiwiaGJ4X2Jsb2NrX2RpYWxvZ19kZXNjcmlwdGlvbiI6IlRvIGNvbnRpbnVlLCBlbnRlciB5b3VyIGVtYWlsIGFkZHJlc3MgdG8gcmVjZWl2ZSBhIG9uZS10aW1lIGNvZGUgdG8gbG9nIGluLiIsImhieF9ibG9ja19kaWFsb2dfY2FuY2VsX2J1dHRvbiI6IkNhbmNlbCIsImhieF9ibG9ja19kaWFsb2dfY29udGludWVfYnV0dG9uIjoiQ29udGludWUiLCJoYnhfc3VwcG9ydF9mYWxsYmFja19idXR0b24iOiJOZWVkIHN1cHBvcnQ/IiwiaGJ4X3JldHJ5X2RpYWxvZ190aXRsZSI6IkhhdmluZyB0cm91YmxlIGxvZ2dpbmcgaW4/IiwiaGJ4X3JldHJ5X2RpYWxvZ19kZXNjcmlwdGlvbiI6IkxldOKAmXMgZ2V0IHlvdSBiYWNrIGludG8gU3BvdGlmeS4gU2VsZWN0IG9uZSBvZiB0aGUgb3B0aW9ucyBiZWxvdyB0byBjb250aW51ZS4iLCJoYnhfcmV0cnlfZGlhbG9nX3JldHJ5X2J1dHRvbiI6IlJldHJ5IHdpdGggRmFjZWJvb2siLCJoYnhfcmV0cnlfZGlhbG9nX2NvbnRhY3Rfc3VwcG9ydF9idXR0b24iOiJDb250YWN0IHVzIiwiaGJ4X3JldHJ5X2RpYWxvZ19jYW5jZWxfYnV0dG9uIjoiQ2FuY2VsIn0=">
+  <style>
+    body {
+      background-color: #121212;
+      margin: 0;
+    }
+    #root {
+      min-height: 100vh;
+    }
+    .loading-indicator-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-indicator-container * {
+      box-sizing: border-box;
+    }
+    .loading-indicator {
+      content: "";
+      width: 56px;
+      inline-size: 56px;
+      block-size: 12.4px;
+      height: 12.4px;
+      overflow-clip-margin: content-box;
+      overflow: hidden;
+    }
+    .loading-indicator circle {
+      fill: white;
+      animation: loading-indicator-kf 1.32s linear infinite;
+      transform-origin: center center;
+      opacity: 0.5;
+    }
+    .loading-indicator circle:nth-of-type(2) {
+      animation-delay: 0.1s;
+    }
+    .loading-indicator circle:nth-of-type(3) {
+      animation-delay: 0.2s;
+    }
+    @keyframes loading-indicator-kf {
+      0% {
+        animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      40% {
+        animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+        opacity: 0.75;
+        transform: scale(1.3);
+      }
+      72.5% {
+        animation-timing-function: linear;
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body class="encore-dark-theme encore-layout-themes">
+<div id="root">
+  <div class="loading-indicator-container">
+    <svg class="loading-indicator" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1 100" xml:space="preserve" role="progressbar" aria-valuetext="Loading">
+      <circle stroke="none" cx="-140" cy="50" r="32"></circle>
+      <circle stroke="none" cx="0" cy="50" r="32"></circle>
+      <circle stroke="none" cx="140" cy="50" r="32"></circle>
+    </svg>
+  </div>
+</div>
+
+
+
+</body></html>
